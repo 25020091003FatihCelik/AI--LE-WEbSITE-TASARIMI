@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fatih Çelik | Frontend Developer</title>
+
+<style>
+:root {
+    --bg: #0a0a0a;
+    --text: #ffffff;
+    --neon: #00f7ff;
+    --neon2: #ff00ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.navbar a {
+    color: var(--text);
+    margin: 0 10px;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar a:hover {
+    color: var(--neon);
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: var(--neon);
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.typing {
+    font-size: 2rem;
+    border-right: 2px solid var(--neon);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(30) forwards, blink .7s infinite;
+}
+
+@keyframes typing {
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid var(--neon);
+    background: transparent;
+    color: var(--neon);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--neon);
+    color: black;
+}
+
+/* SPINNER */
+.spinner {
+    display: none;
+    border: 5px solid #333;
+    border-top: 5px solid var(--neon);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-top: 20px;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* SECTION */
+.section {
+    padding: 100px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.6s;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MOUSE EFFECT */
+.cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: var(--neon);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    font-size: 40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+    .typing { font-size: 1.5rem; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="cursor"></div>
+
+<nav class="navbar">
+    <div>Fatih Çelik</div>
+    <div>
+        <a href="#home">Anasayfa</a>
+        <a href="#about">Hakkımda</a>
+        <a href="#projects">Projeler</a>
+        <a href="#contact">İletişim</a>
+    </div>
+</nav>
+
+<section class="hero" id="home">
+    <div class="typing">Frontend Developer | Modern Web Çözümleri</div>
+    <button class="btn" onclick="loadHome()">Anasayfa Yükle</button>
+    <div class="spinner" id="spinner"></div>
+</section>
+
+<section class="section" id="about">Hakkımda</section>
+<section class="section" id="projects">Projeler</section>
+<section class="section" id="contact">İletişim</section>
+
+<div class="whatsapp" id="wp">📱</div>
+
+<script>
+
+// Spinner
+function loadHome(){
+    let spinner = document.getElementById('spinner');
+    spinner.style.display = 'block';
+    setTimeout(()=>{
+        spinner.style.display = 'none';
+        alert('Yüklendi');
+    },2000);
+}
+
+// Scroll reveal
+window.addEventListener('scroll', () => {
+    document.querySelectorAll('.section').forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            sec.classList.add('show');
+        }
+    });
+
+    // WhatsApp show
+    if(window.scrollY > document.body.scrollHeight * 0.7){
+        document.getElementById('wp').style.display = 'block';
+    }
+});
+
+// Mouse effect
+const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
+</script>
+
+</body>
+</html>

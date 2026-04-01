@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatih Çelik | Yazılım Mühendisi & Frontend Geliştirici</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Mouse Follower Effect -->
+    <div class="cursor-glow"></div>
+
+    <!-- Loading Spinner -->
+    <div id="loader" class="loader-container">
+        <div class="spinner">
+            <div class="inner-spin"></div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/905336277616" class="whatsapp-btn" id="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo" id="home-link">
+                <span class="neon-text-primary">&lt;</span>Fatih<span class="neon-text-primary">/&gt;</span>
+            </a>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Anasayfa</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">Hakkımda</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Hizmetler</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content reveal">
+                <p class="greeting">Merhaba, Ben</p>
+                <h1 class="glitch-text" data-text="Fatih Çelik">Fatih Çelik</h1>
+                <div class="typing-container">
+                    <span class="typing-prefix">Ben bir </span>
+                    <span id="typing-text" class="neon-text-secondary"></span><span class="cursor">|</span>
+                </div>
+                <p class="hero-desc">
+                    Modern şirketler ve yenilikçi girişimler için yüksek performanslı, estetik ve premium web deneyimleri tasarlıyor, geliştiriyor ve hayata geçiriyorum.
+                </p>
+                <div class="hero-cta">
+                    <a href="#services" class="btn btn-primary">Hizmetlerimi İncele <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-outline">İletişime Geç</a>
+                </div>
+            </div>
+            <div class="hero-visual reveal fade-left">
+                <!-- Abstract visual element / Code aesthetic -->
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="window-body">
+                        <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="property">name</span>: <span class="string">'Fatih Çelik'</span>,
+  <span class="property">title</span>: <span class="string">'Yazılım Mühendisi'</span>,
+  <span class="property">role</span>: <span class="string">'Frontend Developer'</span>,
+  <span class="property">skills</span>: [<span class="string">'JS'</span>, <span class="string">'Vue'</span>, <span class="string">'React'</span>, <span class="string">'UI/UX'</span>],
+  <span class="property">passion</span>: <span class="string">'Building premium apps'</span>
+};
+
+<span class="variable">developer</span>.<span class="method">startCoding</span>();</code></pre>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="section-title reveal">
+                <h2 class="neon-text-primary">01.</h2>
+                <h3>Hakkımda</h3>
+                <div class="line"></div>
+            </div>
+            <div class="about-content reveal">
+                <div class="about-text">
+                    <p>Yazılım Mühendisliği eğitimimden aldığım sağlam analitik temeli, modern Frontend teknolojileriyle birleştirerek firmalar için <strong>ölçeklenebilir ve çarpıcı</strong> çözümler üretiyorum.</p>
+                    <p>Özellikle kurumsal şirketlerin dijital dünyadaki yüzünü yenilemek, markalarını lüks ve dinamik bir estetikle yansıtmak konusunda tutkuluyum. "Sadece çalışması yetmez, kullanıcının aklında kalmalı" felsefesiyle kod yazıyorum.</p>
+                    
+                    <ul class="skills-list">
+                        <li><i class="fas fa-check"></i> JavaScript (ES6+)</li>
+                        <li><i class="fas fa-check"></i> React.js / Vue.js</li>
+                        <li><i class="fas fa-check"></i> TailwindCSS / SCSS</li>
+                        <li><i class="fas fa-check"></i> UI/UX Tasarım İlkeleri</li>
+                        <li><i class="fas fa-check"></i> Animasyonlar (GSAP, CSS)</li>
+                        <li><i class="fas fa-check"></i> Performans Optimizasyonu</li>
+                    </ul>
+                </div>
+                <div class="about-image-wrapper">
+                    <div class="about-image neon-box">
+                        <div class="placeholder-image">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="section-title reveal">
+                <h2 class="neon-text-secondary">02.</h2>
+                <h3>Hizmetler</h3>
+                <div class="line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card convert-neon reveal">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h4>Kurumsal Web Uygulamaları</h4>
+                    <p>Modern frameworkler ile hızlı, güvenli ve ölçeklenebilir kompleks web çözümleri.</p>
+                </div>
+                <div class="service-card convert-neon reveal" style="transition-delay: 0.1s">
+                    <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
+                    <h4>Premium UI/UX Tasarım</h4>
+                    <p>Akılda kalıcı, kullanıcı dostu ve markanızın prestijini artıran arayüzler.</p>
+                </div>
+                <div class="service-card convert-neon reveal" style="transition-delay: 0.2s">
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h4>Responsive Dönüşüm</h4>
+                    <p>Kusursuz mobil deneyimi için tüm ekranlara %100 uyumlu tasarımlar.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="section-title reveal">
+                <h2 class="neon-text-primary">03.</h2>
+                <h3>Sıradaki Projeniz</h3>
+                <div class="line"></div>
+            </div>
+            <div class="contact-content reveal">
+                <p>Şirketinizin dijital dönüşümünde bir sonraki adımı atmaya hazır mısınız? Projenizi konuşmak veya sadece tanışmak için bana ulaşın.</p>
+                <a href="mailto:Fatih.90.celk@gmail.com" class="btn btn-primary big-btn">Bana Merhaba De <i class="fas fa-envelope"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/25020091003FatihCelik" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/fatih-%C3%A7elik-34813b400/" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>&copy; 2026 Fatih Çelik. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
