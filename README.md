@@ -32,10 +32,5 @@ Bu proje, Fatih Çelik tarafından geliştirilen bir web sitesi tasarımıdır. 
 
 Bu proje MIT Lisansı ile lisanslanmıştır. Daha fazla bilgi için `LİSANS` dosyasını kontrol edebilirsiniz.
 
-## İletişim
-
-Fatih Çelik  
-📞 [WhatsApp](https://wa.me/1234567890)  
-🔗 [LinkedIn](https://linkedin.com/in/fatihcelik)
 
 
